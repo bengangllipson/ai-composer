@@ -1,5 +1,9 @@
 package com.bengangllipson.aicomposer
 
+import scala.util.Try
+
 class AiComposer {
-  def helloWorld(): Unit = print("Hello, world!")
+  def generateCantusFirmus(): Try[List[String]] = {
+    new CantusFirmusService().generate()
+  }
 }
