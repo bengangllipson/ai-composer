@@ -1,12 +1,13 @@
-package com.bengangllipson.aicomposer
+package com.bengangllipson.aicomposer.service
 
-import com.bengangllipson.aicomposer.CounterpointService.{GET_ALL_NOTES_BETWEEN_TWO_NOTES, PERFECT_INTERVALS}
-import com.bengangllipson.aicomposer.FirstSpeciesService.AVAILABLE_FIRST_SPECIES_NOTES
+import CounterpointService.{GET_ALL_NOTES_BETWEEN_TWO_NOTES, PERFECT_INTERVALS}
+import FirstSpeciesService.AVAILABLE_FIRST_SPECIES_NOTES
+import com.bengangllipson.aicomposer.service.RandomService
 
 import scala.annotation.tailrec
 import scala.util.{Failure, Success, Try}
 
-private class FirstSpeciesService(var randomService: RandomService, var counterpointService: CounterpointService) extends Counterpoint {
+private[aicomposer] class FirstSpeciesService(var randomService: RandomService, var counterpointService: CounterpointService) extends Counterpoint {
   def this() = {
     this(new RandomService(), new CounterpointService())
   }

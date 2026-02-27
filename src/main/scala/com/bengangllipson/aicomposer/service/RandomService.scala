@@ -1,4 +1,4 @@
-package com.bengangllipson.aicomposer
+package com.bengangllipson.aicomposer.service
 
 import scala.util.Random
 

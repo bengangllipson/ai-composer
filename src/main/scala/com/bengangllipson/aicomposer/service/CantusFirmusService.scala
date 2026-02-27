@@ -1,12 +1,13 @@
-package com.bengangllipson.aicomposer
+package com.bengangllipson.aicomposer.service
 
-import com.bengangllipson.aicomposer.CantusFirmusService._
-import com.bengangllipson.aicomposer.CounterpointService.{GET_ALL_NOTES_BETWEEN_TWO_NOTES, MELODIC_CONSONANCES}
+import com.bengangllipson.aicomposer.service.CantusFirmusService.*
+import CounterpointService.{GET_ALL_NOTES_BETWEEN_TWO_NOTES, MELODIC_CONSONANCES}
+import com.bengangllipson.aicomposer.service.{Counterpoint, CounterpointService, RandomService}
 
 import scala.annotation.tailrec
 import scala.util.{Failure, Success, Try}
 
-private class CantusFirmusService(var randomService: RandomService, var counterpointService: CounterpointService) extends Counterpoint {
+private[aicomposer] class CantusFirmusService(var randomService: RandomService, var counterpointService: CounterpointService) extends Counterpoint {
   def this() = {
     this(new RandomService(), new CounterpointService())
   }

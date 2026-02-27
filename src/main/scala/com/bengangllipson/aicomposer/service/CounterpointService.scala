@@ -1,6 +1,6 @@
-package com.bengangllipson.aicomposer
+package com.bengangllipson.aicomposer.service
 
-import com.bengangllipson.aicomposer.CounterpointService.{FLAT_KEYS, HARMONIC_CONSONANCES, MAJOR_KEY_INTERVALS, MELODIC_CONSONANCES, NOTES, OCTAVE, SHARP_KEYS}
+import com.bengangllipson.aicomposer.service.CounterpointService.*
 
 import scala.util.matching.Regex
 
