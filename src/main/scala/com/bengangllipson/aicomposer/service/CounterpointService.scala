@@ -4,7 +4,7 @@ import com.bengangllipson.aicomposer.service.CounterpointService.*
 
 import scala.util.matching.Regex
 
-private class CounterpointService {
+private[aicomposer] class CounterpointService {
   def getInterval(bottomNote: String, topNote: String, availableNotes: List[String]): Int =
     availableNotes.indexOf(topNote) - availableNotes.indexOf(bottomNote)
 
