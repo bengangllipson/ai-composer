@@ -16,8 +16,8 @@ class AiComposer {
     }
   }
 
-  def generateFirstSpecies(cantusFirmus: List[String]): java.util.List[String] = {
-    firstSpeciesService.generate(cantusFirmus) match {
+  def generateFirstSpecies(cantusFirmus: java.util.List[String]): java.util.List[String] = {
+    firstSpeciesService.generate(cantusFirmus.asScala.toList) match {
       case Success(value) => value.asJava
       case Failure(exception) => throw exception
     }
