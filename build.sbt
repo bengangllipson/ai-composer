@@ -1,6 +1,6 @@
 import java.net.URI
 
-ThisBuild / version := "1.1.1"
+ThisBuild / version := "2.0.0"
 ThisBuild / scalaVersion := "3.8.2"
 ThisBuild / publishMavenStyle := true
 ThisBuild / pomIncludeRepository := { _ => false }
