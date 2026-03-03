@@ -25,3 +25,9 @@ ThisBuild / developers := List(Developer("bengangllipson", "Ben Gangl-Lipson", "
 
 Compile / packageSrc / publishArtifact := true
 Compile / packageDoc / publishArtifact := true
+
+libraryDependencies ++= Seq(
+  "org.scalamock" %% "scalamock" % "7.5.5",
+)
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.19"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.19" % "test"

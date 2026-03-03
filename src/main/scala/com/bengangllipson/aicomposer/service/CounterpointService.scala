@@ -333,10 +333,10 @@ private[aicomposer] class CounterpointService {
   }
 }
 
-private object CounterpointService {
-  val SHARP_KEYS: Set[String] = Set("A", "B", "C", "D", "E", "G")
-  val FLAT_KEYS: Set[String] = Set("F", "Bb", "Eb", "Ab", "Db", "Gb")
-  val NOTES: List[String] = List(
+object CounterpointService {
+  private val SHARP_KEYS: Set[String] = Set("A", "B", "C", "D", "E", "G")
+  private val FLAT_KEYS: Set[String] = Set("F", "Bb", "Eb", "Ab", "Db", "Gb")
+  private val NOTES: List[String] = List(
     "E",
     "F",
     "F#/Gb",
@@ -350,16 +350,16 @@ private object CounterpointService {
     "D",
     "D#/Eb"
   )
-  val MAJOR_KEY_INTERVALS: Set[Int] = Set(
+  private val MAJOR_KEY_INTERVALS: Set[Int] = Set(
     0, 2, 4, 5, 7, 9, 11
   )
-  val OCTAVE = 12
+  private val OCTAVE = 12
 
   val MELODIC_CONSONANCES: Set[Int] = Set(
     1, 2, 3, 4, 5, 7, 8, 9, 12
   )
 
-  val HARMONIC_CONSONANCES: Set[Int] = Set(
+  private val HARMONIC_CONSONANCES: Set[Int] = Set(
     0, 3, 4, 5, 7, 8, 9, 12
   )
 
